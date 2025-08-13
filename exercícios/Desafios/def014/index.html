@@ -15,16 +15,37 @@
         }
 
         th, td {
-            border: 1px solid gray;
+            border: 1px solid black;
             padding: 10px;
+            width: 100px;
+            text-align: center;
         }
+
+        thead, tr #cor {
+            background-color: gray;
+            color: white;
+        }
+
+        tbody #cor2 {
+            text-align: left;
+            background-color: gray;
+            
+            color:white
+            
+        }
+
+        tfoot, td #cor3 {
+            background-color: gray;
+            color: white;
+        }
+        
     </style>
 </head>
 <body>
     <h1>Desafio Tabela</h1>
     <table>
     <thead>
-        <tr>
+        <tr id="cor">
             <th scope="col" rowspan="3">Área</th>
             <th rowspan="3">Disciplina</th>
             <th colspan="2">Notas</th>
@@ -37,7 +58,8 @@
     </thead>
 
     <tfoot>
-        <th>Média de Humanas</th>
+        <th id="cor3"  colspan="4">Média de Humanas</th>
+        <td id="cor3">00.00</td>
     </tfoot>
 
     <tbody>
@@ -70,9 +92,27 @@
             <td>20.00</td>
         </tr>
 
-        <tr>
+        <tr id="cor2">
             <th colspan="4">Média de Exatas</th>
+            <td>00.00</td>
         </tr>
+
+        <tr>
+            <th rowspan="3">Humanas</th>
+            <td>Historia</td>
+            <td>00.00</td>
+            <td>00.00</td>
+            <td>00.00</td>
+            
+        </tr>
+
+        <tr>
+            <td>Geografia</td>
+            <td>00.00</td>
+            <td>00.00</td>
+            <td>00.00</td>
+        </tr>
+        
     </tbody>
     </table>
 </body>
